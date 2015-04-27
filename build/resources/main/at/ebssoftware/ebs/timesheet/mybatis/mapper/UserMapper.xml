@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="at.ebssoftware.ebs.timesheet.mybatis.mapper.UserMapper">
+ 
+  <resultMap id="BaseResultMap" type="at.ebssoftware.ebs.timesheet.model.User">
+
+    <id column="UsrID" jdbcType="CHAR" property="ID" />
+    <result column="FirstNameUsr" jdbcType="VARCHAR" property="firstName" />
+    <result column="LastNameUsr" jdbcType="VARCHAR" property="lastName" />
+    <result column="AddressUsr" jdbcType="VARCHAR" property="address" />
+    <result column="CityUsr" jdbcType="VARCHAR" property="city" />
+    <result column="DepartmentUsr" jdbcType="VARCHAR" property="department" />
+  </resultMap>
+ 
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from std.tbUser
+    where UsrID = #{ID,jdbcType=CHAR}
+  </select>
+ 
+</mapper>
