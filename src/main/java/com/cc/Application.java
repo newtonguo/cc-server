@@ -83,6 +83,7 @@ public class Application {
 		return new DataSourceTransactionManager(dataSource());
 	}
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(
 				new Object[] { Application.class }, args);

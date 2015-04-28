@@ -13,7 +13,7 @@ apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
 jar {
-	baseName = 'spring-boot-mybatis'
+	baseName = 'file'
 	version =  '0.1.0'
 }
 
