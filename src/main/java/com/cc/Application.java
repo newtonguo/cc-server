@@ -1,4 +1,4 @@
-package at.ebssoftware.ebs.timesheet;
+package com.cc;
 
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
@@ -19,7 +19,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
-import at.ebssoftware.ebs.timesheet.configuration.TomcatPoolDataSourceProperties;
+import com.cc.configuration.TomcatPoolDataSourceProperties;
 
 @Configuration
 @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class )

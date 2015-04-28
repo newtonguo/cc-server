@@ -1,4 +1,4 @@
-package at.ebssoftware.ebs.timesheet.configuration;
+package com.cc.configuration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

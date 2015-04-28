@@ -1,4 +1,4 @@
-package at.ebssoftware.ebs.timesheet.model;
+package com.cc.model;
 
 
 public class User {
