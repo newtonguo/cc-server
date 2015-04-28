@@ -1,7 +1,6 @@
 package com.cc;
 
 import javax.annotation.PreDestroy;
-import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.jdbc.pool.DataSource;
@@ -14,6 +13,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -22,36 +22,24 @@ import org.springframework.transaction.PlatformTransactionManager;
 import com.cc.configuration.TomcatPoolDataSourceProperties;
 
 @Configuration
-@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class )
+@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
 @EnableConfigurationProperties(TomcatPoolDataSourceProperties.class)
-@MapperScan("at.ebssoftware.ebs.timesheet.mybatis.mapper")
+@ComponentScan("com.cc.*")
+@MapperScan("com.cc.mapper")
 public class Application {
-
-//	@Bean 
-//	public UserMapper userMapper() throws Exception {
-//		return createMapper(UserMapper.class);
-//	}
-//	
-//	private <T> T createMapper(Class<T> type) throws Exception {
-//		MapperFactoryBean<T> factory = new MapperFactoryBean<T>();
-//		factory.setMapperInterface(type);
-//		factory.setSqlSessionFactory(sqlSessionFactoryBean());
-//		return factory.getObject();
-//	}
-	
 
 	@Autowired
 	private TomcatPoolDataSourceProperties tomcatPoolDataSourceProperties;
 
 	private org.apache.tomcat.jdbc.pool.DataSource pool;
-	
+
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
-		
+
 		TomcatPoolDataSourceProperties config = tomcatPoolDataSourceProperties;
-		
+
 		this.pool = new org.apache.tomcat.jdbc.pool.DataSource();
-		
+
 		this.pool.setDriverClassName(config.getDriverClassName());
 		this.pool.setUrl(config.getUrl());
 		if (config.getUsername() != null) {
@@ -76,28 +64,28 @@ public class Application {
 			this.pool.close();
 		}
 	}
-	
+
 	@Bean
 	public SqlSessionFactory sqlSessionFactoryBean() throws Exception {
-		
+
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource());
-		
-		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		sqlSessionFactoryBean
-			.setMapperLocations(resolver.getResources("classpath:at/ebssoftware/ebs/timesheet/mybatis/mapper/*.xml"));
 
-		 return sqlSessionFactoryBean.getObject();
+		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+		sqlSessionFactoryBean.setMapperLocations(resolver
+				.getResources("classpath:mapper/*.xml"));
+
+		return sqlSessionFactoryBean.getObject();
 	}
-	
+
 	@Bean
 	public PlatformTransactionManager transactionManager() {
 		return new DataSourceTransactionManager(dataSource());
 	}
-	
-	
+
 	public static void main(String[] args) {
-		ConfigurableApplicationContext ctx = SpringApplication.run(new Object[] { Application.class }, args);
+		ConfigurableApplicationContext ctx = SpringApplication.run(
+				new Object[] { Application.class }, args);
 
 	}
 
