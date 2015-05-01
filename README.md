@@ -1,6 +1,6 @@
-spring-boot-mybatis
+文件服务器
 ===================
+架构 ：mybatis+spring boot
 
-Test project to show that mybatis @MapperScan causes Spring Boot's property mechanism to fail
+如果有什么bug，请指教
 
--> Fixed with upgrade to version 1.1.6.BUILD-SNAPSHOT of spring boot.
