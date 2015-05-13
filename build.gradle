@@ -36,6 +36,8 @@ dependencies {
 	
 	compile("org.apache.tomcat:tomcat-jdbc:7.0.50")
     compile    'mysql:mysql-connector-java:5.1.35'
+    compile    'com.github.pagehelper:pagehelper:3.7.1'
+    
 	
 	testCompile("junit:junit:4.11")
 	testCompile("org.springframework:spring-test:4.0.1.RELEASE")
