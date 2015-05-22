@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cc.entity.File;
 import com.cc.mapper.FileMapper;
-import com.cc.model.File;
 import com.cc.service.FileService;
 
 @Service

@@ -2,7 +2,7 @@ package com.cc.service;
 
 import java.util.List;
 
-import com.cc.model.File;
+import com.cc.entity.File;
 
 public abstract interface FileService {
 	public abstract List<File> listPageFile(File paramFile);

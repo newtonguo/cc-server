@@ -2,7 +2,7 @@ package com.cc.mapper;
 
 import java.util.List;
 
-import com.cc.model.File;
+import com.cc.entity.File;
 
 public abstract interface FileMapper {
 	public abstract List<File> listPageFile(File paramFile);

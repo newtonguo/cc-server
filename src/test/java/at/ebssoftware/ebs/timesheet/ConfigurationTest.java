@@ -9,8 +9,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.cc.Application;
 import com.cc.configuration.TomcatPoolDataSourceProperties;
+import com.cc.entity.User;
 import com.cc.mapper.UserMapper;
-import com.cc.model.User;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = { Application.class })
