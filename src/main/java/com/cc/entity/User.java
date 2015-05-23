@@ -1,49 +1,146 @@
 package com.cc.entity;
 
 
-public class User {
+/**
+ * 用户表 <b>Application describing:</b> <br>
+ * <b>Copyright:</b>Copyright &copy; 2014 <br>
+ * <b>Company:vvme</b><br>
+ * <b>Date:</b>2014-9-12下午5:54:00<br>
+ * 
+ * @author cuicong
+ */
 
-	private String ID;
-	private String firstName;
-	private String lastName;
+public class User implements java.io.Serializable {
+
+	// Fields
+
+	/**
+	 * {字段功能描述}
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer userId;
+	private String userName;
+	private String password;
+	private String name;
+	private String isLocked;
+	private String enableFlag;
+	private String sex;
+	private String email;
 	private String address;
-	private String city;
-	private String department;
-	
-	public String getID() {
-		return ID;
+	private String tel;
+	private String belongRoles = "";// 用户拥有的角色
+
+	// Constructors
+
+	public String getBelongRoles() {
+		return belongRoles;
 	}
-	public void setID(String iD) {
-		ID = iD;
+
+	public void setBelongRoles(String belongRoles) {
+		this.belongRoles = belongRoles;
 	}
-	public String getFirstName() {
-		return firstName;
+
+	public String getSex() {
+		return sex;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
-	public String getLastName() {
-		return lastName;
+
+	public String getEmail() {
+		return email;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
+
 	public String getAddress() {
 		return address;
 	}
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getCity() {
-		return city;
+
+	public String getTel() {
+		return tel;
 	}
-	public void setCity(String city) {
-		this.city = city;
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
-	public String getDepartment() {
-		return department;
+
+	public String getIsLocked() {
+		return isLocked;
 	}
-	public void setDepartment(String department) {
-		this.department = department;
+
+	public void setIsLocked(String isLocked) {
+		this.isLocked = isLocked;
 	}
+
+	public String getEnableFlag() {
+		return enableFlag;
+	}
+
+	public void setEnableFlag(String enableFlag) {
+		this.enableFlag = enableFlag;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	/** default constructor */
+	public User() {
+	}
+
+	/** minimal constructor */
+	public User(String userName, String password) {
+		this.userName = userName;
+		this.password = password;
+	}
+
+	/** full constructor */
+	public User(String userName, String password, String name) {
+		this.userName = userName;
+		this.password = password;
+		this.name = name;
+	}
+
+	// Property accessors
+
+	public Integer getUserId() {
+		return this.userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+	public String getUserName() {
+		return this.userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }
