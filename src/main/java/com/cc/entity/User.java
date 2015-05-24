@@ -1,11 +1,10 @@
 package com.cc.entity;
 
-
 /**
- * ÓÃ»§±í <b>Application describing:</b> <br>
+ * ï¿½Ã»ï¿½ï¿½ï¿½ <b>Application describing:</b> <br>
  * <b>Copyright:</b>Copyright &copy; 2014 <br>
  * <b>Company:vvme</b><br>
- * <b>Date:</b>2014-9-12ÏÂÎç5:54:00<br>
+ * <b>Date:</b>2014-9-12ï¿½ï¿½ï¿½ï¿½5:54:00<br>
  * 
  * @author cuicong
  */
@@ -15,7 +14,7 @@ public class User implements java.io.Serializable {
 	// Fields
 
 	/**
-	 * {×Ö¶Î¹¦ÄÜÃèÊö}
+	 * {ï¿½Ö¶Î¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½}
 	 */
 	private static final long serialVersionUID = 1L;
 	private Integer userId;
@@ -28,9 +27,18 @@ public class User implements java.io.Serializable {
 	private String email;
 	private String address;
 	private String tel;
-	private String belongRoles = "";// ÓÃ»§ÓµÓÐµÄ½ÇÉ«
+	private String belongRoles = "";// ï¿½Ã»ï¿½Óµï¿½ÐµÄ½ï¿½É«
+	private String info;
 
 	// Constructors
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
 
 	public String getBelongRoles() {
 		return belongRoles;

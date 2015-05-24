@@ -20,11 +20,14 @@ public class LoginServiceImpl implements LoginService {
 		user.setUserName(userName);
 		List<User> list = this.userMapper.getUser(user);
 		if (list.size() > 0) {
-			return list.get(0);
+			user = list.get(0);
+			user.setInfo("登录成功！");
+			return user;
 
 		} else {
-			return null;
+			user = new User();
+			user.setInfo("用户名密码错误！");
+			return user;
 		}
 	}
-
 }
