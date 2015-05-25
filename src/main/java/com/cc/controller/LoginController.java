@@ -1,5 +1,7 @@
 package com.cc.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cc.entity.Menu;
 import com.cc.entity.User;
 import com.cc.service.LoginService;
 
@@ -29,8 +32,18 @@ public class LoginController {
 	 */
 	@RequestMapping("login")
 	public User login(HttpServletRequest reques, @RequestBody User user) {
-		return this.loginService
-				.getUser(user.getUserName(), user.getPassword());
+		User u = this.loginService.getUser(user.getUserName(),
+				user.getPassword());
+		// 将用户名存到session当中
+		reques.getSession().setAttribute("user", u);
+		return u;
+	}
+
+	@RequestMapping("listMenuByUser")
+	public List<Menu> listMenuByUser(HttpServletRequest reques) {
+		User user = (User) reques.getSession().getAttribute("user");
+		List<Menu> listMenu = loginService.ListMenuByUserId(user);
+		return listMenu;
 	}
 
 }

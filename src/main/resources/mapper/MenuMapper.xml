@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cc.mapper.MenuMapper">
+	<resultMap id="BaseResultMap" type="com.cc.entity.Menu">
+		<id property="menuId" column="menu_id" />
+		<result property="menuName" column="menu_name" />
+		<result property="menuUrl" column="menu_url" />
+		<result property="PId" column="p_id" />
+		<result property="pName" column="pName" />
+		<result property="level" column="level" />
+		<result property="updateTime" column="update_time" />
+		<result property="updatePerson" column="update_person" />
+		<result property="updatePersonId" column="update_person_id" />
+		<result property="isLocked" column="is_locked" />
+		<result property="enableFlag" column="enable_flag" />
+		<result property="menuSort" column="menu_sort" />
+	</resultMap>
+	<select id="queryBelongMenu" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		SELECT DISTINCT
+		a.*
+
+		FROM
+		menu a,
+		role_menu
+		c,
+		user_role d
+		WHERE
+		a.menu_id = c.menu_id
+		and
+		c.role_id=d.role_id
+		AND d.user_id = #{userId}
+		order by a.menu_sort asc
+
+	</select>
+	<select id="queryAllMenu" resultMap="BaseResultMap">
+		select a.*,(select b.menu_name from menu b where b.menu_id=a.p_id) as
+		pName from menu a order by menu_sort
+
+	</select>
+	<select id="get" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		* from menu where menu_id=#{menuId}
+
+	</select>
+	<select id="queryByPId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		* from menu where p_id=#{PId}
+	</select>
+	<select id="queryByRoleId" resultMap="BaseResultMap"
+		parameterType="int">
+		select
+		a.* from menu a,role_menu b where
+		b.role_id=#{roleId} and a.menu_id=b.menu_id
+	</select>
+	<insert id="add" parameterType="com.cc.entity.Menu"
+		useGeneratedKeys="true" keyProperty="menuId">
+		insert into
+		Menu(menu_name,menu_url,p_id,update_time,update_person,update_person_id,level,is_locked,enable_flag,menu_sort)
+		values(#{menuName},#{menuUrl},#{PId},#{updateTime},#{updatePerson},#{updatePersonId},#{level},#{isLocked},#{enableFlag},#{menuSort})
+	</insert>
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from Menu where
+		menu_id=#{menuId} and is_locked='F'
+	</delete>
+	<update id="update" parameterType="com.cc.entity.Menu">
+		update Menu set
+		menu_name=#{menuName},
+		menu_url=#{menuUrl},
+		p_id=#{PId},
+		update_person=#{updatePerson},
+		update_person_id=#{updatePersonId},
+		level=#{level},
+		is_locked=#{isLocked},
+		enable_flag=#{enableFlag},
+		p_id=#{PId},
+		menu_sort=#{menuSort}
+		where menu_id=#{menuId}
+	</update>
+	<select id="queryPageList" resultMap="BaseResultMap"
+		parameterType="com.cc.entity.Menu">
+		select
+		*
+		from menu where 1=1
+	order by menu_sort	LIMIT #{beginItem},#{pageSize} 
+	</select>
+	<select id="count" resultType="int" parameterType="com.cc.entity.Menu">
+		select
+		count(*)
+		from menu where 1=1
+		
+	</select>
+
+</mapper>
