@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cc.mapper.LocationMapper">
+	
+	<resultMap id="LocationMap" type="com.cc.entity.Location">
+		   <result property="id" column="id" />
+		   <result property="userId" column="user_id" />
+		   <result property="lng" column="lng" />
+		   <result property="lat" column="lat" />
+		   <result property="createtime" column="createtime" />
+	</resultMap>
+	
+	
+	<sql id="LocationColumns">
+		  id, user_id, lng, lat, createtime
+    </sql>
+	
+    <!-- 很据条件查询店铺的全部 -->
+	<select id="listPageLocation" resultMap="LocationMap" 
+	parameterType="com.cc.entity.Location">
+		select
+		<include refid="LocationColumns" />
+		from location where 1=1 
+			 <if test="id !=null and id!=''">
+				and id=#{id}
+			</if>
+			 <if test="userId !=null and userId!=''">
+				and user_id=#{userId}
+			</if>
+			 <if test="lng !=null and lng!=''">
+				and lng=#{lng}
+			</if>
+			 <if test="lat !=null and lat!=''">
+				and lat=#{lat}
+			</if>
+			 <if test="createtime !=null and createtime!=''">
+				and createtime=#{createtime}
+			</if>
+	</select>
+	
+	<!-- 查询location的数量-->
+	<select id="getLocationCount" resultType="Integer">
+		select count(*)
+		from location
+	</select>
+	
+	<!-- 插入 -->
+	<insert id="insert" parameterType="com.cc.entity.Location" 
+	  useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO location (
+			user_id, lng, lat, createtime
+		) VALUES (
+			#{userId}, #{lng}, #{lat}, #{createtime}
+		)
+	</insert>
+	
+	<!-- 根据主键查询(唯一)-->
+	<select id="getLocationById" parameterType="Integer" resultType="com.cc.entity.Location">
+		select 
+		<include refid="LocationColumns" /> 
+		from location where 
+		         id=#{id}
+	</select>
+	
+	<!-- 根据条件查询 location  -->
+	<select id="getLocation" resultMap="LocationMap" parameterType="com.cc.entity.Location">
+		select
+		<include refid="LocationColumns" />
+		from location where 1=1 
+			 <if test="id !=null and id!=''">
+				and id=#{id}
+			</if>
+			 <if test="userId !=null and userId!=''">
+				and user_id=#{userId}
+			</if>
+			 <if test="lng !=null and lng!=''">
+				and lng=#{lng}
+			</if>
+			 <if test="lat !=null and lat!=''">
+				and lat=#{lat}
+			</if>
+			 <if test="createtime !=null and createtime!=''">
+				and createtime=#{createtime}
+			</if>
+	</select>
+	
+	<!--更新  -->
+	<update id="updateLocation" parameterType="com.cc.entity.Location">
+		UPDATE location 
+		SET
+		id=#{id}, user_id=#{userId}, lng=#{lng}, lat=#{lat}, createtime=#{createtime}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<!--根据条件删除  -->
+	<delete id="deleteLocation" parameterType="com.cc.entity.Location">
+		delete from location 
+		where 1=1
+			 <if test="id !=null and id!=''">
+				and id =  #{id}
+			</if>
+			 <if test="userId !=null and userId!=''">
+				and user_id =  #{userId}
+			</if>
+			 <if test="lng !=null and lng!=''">
+				and lng =  #{lng}
+			</if>
+			 <if test="lat !=null and lat!=''">
+				and lat =  #{lat}
+			</if>
+			 <if test="createtime !=null and createtime!=''">
+				and createtime =  #{createtime}
+			</if>
+	</delete>
+</mapper>
