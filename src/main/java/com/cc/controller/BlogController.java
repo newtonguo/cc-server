@@ -54,7 +54,6 @@ public class BlogController {
 	public String load(Blog blog, ModelMap modelMap) {
 		blog = blogService.getBlogById(blog.getBlogId());
 		modelMap.addAttribute("blog", blog);
-
 		return "blog/BlogInfo";
 	}
 

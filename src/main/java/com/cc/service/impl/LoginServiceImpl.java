@@ -14,49 +14,50 @@ import com.cc.service.LoginService;
 
 @Service
 public class LoginServiceImpl implements LoginService {
-	@Autowired(required = true)
-	private UserMapper userMapper;
-	@Autowired
-	private MenuMapper menuMapper;
+    @Autowired(required = true)
+    private UserMapper userMapper;
 
-	public User getUser(String userName, String password) {
-		User user = new User();
-		user.setPassword(password);
-		user.setUserName(userName);
-		List<User> list = this.userMapper.getUser(user);
-		if (list.size() > 0) {
-			user = list.get(0);
-			user.setInfo("登录成功！");
-			return user;
+    @Autowired
+    private MenuMapper menuMapper;
 
-		} else {
-			user = new User();
-			user.setInfo("用户名密码错误！");
-			return user;
-		}
-	}
+    public User getUser(String userName, String password) {
+        User user = new User();
+        user.setPassword(password);
+        user.setUserName(userName);
+        List<User> list = this.userMapper.getUser(user);
+        if (list.size() > 0) {
+            user = list.get(0);
+            user.setInfo("登录成功！");
+            return user;
 
-	@Override
-	public List<Menu> ListMenuByUserId(User user) {
-		List<Menu> menuList = this.menuMapper.queryBelongMenu(user.getUserId());
-		List<Menu> reMenus = new ArrayList<Menu>();
-		for (Menu m : menuList) {
-			boolean mark = false;
-			for (Menu m1 : menuList) {
-				if (m.getPId() != null
-						&& m.getPId().intValue() == m1.getMenuId().intValue()) {
-					mark = true;
-					if (m1.getChildren() == null)
-						m1.setChildren(new ArrayList<Menu>());
-					m1.getChildren().add(m);
-					break;
-				}
-			}
-			if (!mark && m.getLevel() == 2) {
-				reMenus.add(m);
-			}
-		}
+        }
+        else {
+            user = new User();
+            user.setInfo("用户名密码错误！");
+            return user;
+        }
+    }
 
-		return reMenus;
-	}
+    @Override
+    public List<Menu> ListMenuByUserId(User user) {
+        List<Menu> menuList = this.menuMapper.queryBelongMenu(user.getUserId());
+        List<Menu> reMenus = new ArrayList<Menu>();
+        for (Menu m : menuList) {
+            boolean mark = false;
+            for (Menu m1 : menuList) {
+                if (m.getPId() != null && m.getPId().intValue() == m1.getMenuId().intValue()) {
+                    mark = true;
+                    if (m1.getChildren() == null)
+                        m1.setChildren(new ArrayList<Menu>());
+                    m1.getChildren().add(m);
+                    break;
+                }
+            }
+            if (!mark && m.getLevel() == 2) {
+                reMenus.add(m);
+            }
+        }
+
+        return reMenus;
+    }
 }
