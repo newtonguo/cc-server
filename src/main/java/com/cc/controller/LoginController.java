@@ -5,7 +5,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,7 +30,7 @@ public class LoginController {
      * @author: cuicong
      */
     @RequestMapping("login")
-    public User login(HttpServletRequest reques, @RequestBody User user) {
+    public User login(HttpServletRequest reques, User user) {
         User u = this.loginService.getUser(user.getUserName(), user.getPassword());
         // 将用户名存到session当中
         reques.getSession().setAttribute("user", u);
