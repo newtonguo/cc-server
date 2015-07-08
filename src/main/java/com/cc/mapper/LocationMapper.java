@@ -18,10 +18,18 @@ public interface LocationMapper{
 	 */
 	public Integer getLocationCount();
 	
-	/**
-	 *插入
-	 */
+	
 	public void insert(Location location);
+	/**
+	 *有条件的更新
+	 */
+	
+	public void insertSelective(Location location);
+	/**
+	 *根据主键有条件的更新
+	 */
+	
+	public void updateByPrimaryKeySelective(Location location);
 	
 	/**
 	 * 根据主键查询(唯一)
@@ -31,7 +39,7 @@ public interface LocationMapper{
 	/**
 	 * 根据根据条件查询Location 
 	 */
-	public List<Location> getLocation(Location location);  
+	public List<Location> listLocation(Location location);  
 	 
 	 /**
 	 * 更新Location

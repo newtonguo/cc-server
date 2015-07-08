@@ -32,7 +32,7 @@ public interface LocationService{
 	/**
 	 * 根据根据条件查询Location 
 	 */
-	public List<Location> getLocation(Location location);  
+	public List<Location> listLocation(Location location);  
 	 
 	 /**
 	 * 更新Location
@@ -49,5 +49,15 @@ public interface LocationService{
 	 * 根据主键删除
 	 */
 	public void  deleteLocationByIds (String[] ids);
+	/**
+	 *有条件的更新
+	 */
+	
+	public void insertSelective(Location location);
+	/**
+	 *根据主键有条件的更新
+	 */
+	
+	public void updateByPrimaryKeySelective(Location location);
 	
 }

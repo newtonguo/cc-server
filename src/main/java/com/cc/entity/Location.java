@@ -5,69 +5,84 @@ package com.cc.entity;
  */
 public class Location {
 
-	/**
-	   
-	 */
-	private Integer id;
+    /**
+       
+     */
+    private Integer id;
 
-	/**
-	 * 用户id
-	 */
-	private short userId;
+    /**
+       用户id
+     */
+    private Integer userId;
 
-	/**
-	 * 经度
-	 */
-	private String lng;
+    /**
+       经度
+     */
+    private double lng;
 
-	/**
-	 * 纬度
-	 */
-	private String lat;
+    /**
+       纬度
+     */
+    private double lat;
 
-	/**
-	 * 创建时间
-	 */
-	private Integer createtime;
+    /**
+       创建时间
+     */
+    private java.util.Date createtime;
 
-	public Integer getId() {
-		return id;
-	}
+    /**
+       
+     */
+    private String address;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    //分页
 
-	public short getUserId() {
-		return userId;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setUserId(short userId) {
-		this.userId = userId;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getLng() {
-		return lng;
-	}
+    public Integer getUserId() {
+        return userId;
+    }
 
-	public void setLng(String lng) {
-		this.lng = lng;
-	}
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
-	public String getLat() {
-		return lat;
-	}
+    public double getLng() {
+        return lng;
+    }
 
-	public void setLat(String lat) {
-		this.lat = lat;
-	}
+    public void setLng(double lng) {
+        this.lng = lng;
+    }
 
-	public Integer getCreatetime() {
-		return createtime;
-	}
+    public double getLat() {
+        return lat;
+    }
 
-	public void setCreatetime(Integer createtime) {
-		this.createtime = createtime;
-	}
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public java.util.Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(java.util.Date createtime) {
+        this.createtime = createtime;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
 }

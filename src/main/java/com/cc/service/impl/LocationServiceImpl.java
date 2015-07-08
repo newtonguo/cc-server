@@ -35,8 +35,8 @@ public  class LocationServiceImpl implements LocationService{
 	}
 	
 	@Override
-	public List<Location> getLocation(Location location){
-	    return locationMapper.getLocation(location);
+	public List<Location> listLocation(Location location){
+	    return locationMapper.listLocation(location);
 	}  
 	
 	@Override
@@ -52,6 +52,16 @@ public  class LocationServiceImpl implements LocationService{
 	@Override
 	public void  deleteLocationByIds (String[] ids){
 	    locationMapper.deleteLocationByIds(ids); 
-	};
+	}
+	
+	@Override
+	public void insertSelective(Location location){
+	 locationMapper.insertSelective(location);
+	}
+	
+	@Override
+	public void updateByPrimaryKeySelective(Location location){
+		 locationMapper.updateByPrimaryKeySelective(location);
+	}
 	
 }
