@@ -13,9 +13,10 @@ apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
 jar {
-	baseName = 'file'
+	baseName = 'cc-server'
 	version =  '0.1.0'
 }
+tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
 
 repositories {
 	mavenCentral()
