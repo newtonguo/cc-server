@@ -8,44 +8,44 @@ public interface BlogMapper{
    
 	
 	/**
-	 * æ ¹æ®æ¡ä»¶ æŸ¥è¯¢å…¨éƒ¨listPageAccount
+	 * ¸ù¾İÌõ¼ş ²éÑ¯È«²¿listPageAccount
 	 */
 	 
 	public List<Blog> listPageBlog(Blog blog);
 	
 	/**
-	 *  è·å–Blogçš„æ•°é‡
+	 *  »ñÈ¡BlogµÄÊıÁ¿
 	 */
 	public Integer getBlogCount();
 	
 	/**
-	 *æ’å…¥
+	 *²åÈë
 	 */
 	public void insert(Blog blog);
 	
 	/**
-	 * æ ¹æ®ä¸»é”®æŸ¥è¯¢(å”¯ä¸€)
+	 * ¸ù¾İÖ÷¼ü²éÑ¯(Î¨Ò»)
 	 */
 	public Blog getBlogById(Integer id);
 	
 	/**
-	 * æ ¹æ®æ ¹æ®æ¡ä»¶æŸ¥è¯¢Blog 
+	 * ¸ù¾İ¸ù¾İÌõ¼ş²éÑ¯Blog 
 	 */
 	public List<Blog> getBlog(Blog blog);  
 	 
 	 /**
-	 * æ›´æ–°Blog
+	 * ¸üĞÂBlog
 	 */
 	public void updateBlog(Blog blog);
 	
 	 /**
-	 * å¾ˆæ®å®ä½“ç±»åˆ é™¤
+	 * ºÜ¾İÊµÌåÀàÉ¾³ı
 	 */
 	
 	public void  deleteBlog(Blog blog);
 	
 	 /**
-	 * æ ¹æ®ä¸»é”®åˆ é™¤
+	 * ¸ù¾İÖ÷¼üÉ¾³ı
 	 */
 	public void  deleteBlogByIds (String[] id);
 	

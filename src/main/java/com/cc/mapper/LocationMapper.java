@@ -8,44 +8,44 @@ public interface LocationMapper{
    
 	
 	/**
-	 * æ ¹æ®æ¡ä»¶ æŸ¥è¯¢å…¨éƒ¨listPageAccount
+	 * ¸ù¾İÌõ¼ş ²éÑ¯È«²¿listPageAccount
 	 */
 	 
 	public List<Location> listPageLocation(Location location);
 	
 	/**
-	 *  è·å–Locationçš„æ•°é‡
+	 *  »ñÈ¡LocationµÄÊıÁ¿
 	 */
 	public Integer getLocationCount();
 	
 	/**
-	 *æ’å…¥
+	 *²åÈë
 	 */
 	public void insert(Location location);
 	
 	/**
-	 * æ ¹æ®ä¸»é”®æŸ¥è¯¢(å”¯ä¸€)
+	 * ¸ù¾İÖ÷¼ü²éÑ¯(Î¨Ò»)
 	 */
 	public Location getLocationById(Integer id);
 	
 	/**
-	 * æ ¹æ®æ ¹æ®æ¡ä»¶æŸ¥è¯¢Location 
+	 * ¸ù¾İ¸ù¾İÌõ¼ş²éÑ¯Location 
 	 */
 	public List<Location> getLocation(Location location);  
 	 
 	 /**
-	 * æ›´æ–°Location
+	 * ¸üĞÂLocation
 	 */
 	public void updateLocation(Location location);
 	
 	 /**
-	 * å¾ˆæ®å®ä½“ç±»åˆ é™¤
+	 * ºÜ¾İÊµÌåÀàÉ¾³ı
 	 */
 	
 	public void  deleteLocation(Location location);
 	
 	 /**
-	 * æ ¹æ®ä¸»é”®åˆ é™¤
+	 * ¸ù¾İÖ÷¼üÉ¾³ı
 	 */
 	public void  deleteLocationByIds (String[] id);
 	

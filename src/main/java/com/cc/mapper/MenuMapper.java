@@ -7,19 +7,19 @@ import com.cc.entity.Menu;
 public interface MenuMapper {
 	/**
 	 * 
-	 * 鑾峰彇鐢ㄦ埛鎵�灞炵殑鑿滃崟
+	 * 获取用户所属的菜单
 	 * 
 	 * @param menuId
-	 * @return <b>Date:</b>2014-9-11涓婂崍11:08:18<br>
+	 * @return <b>Date:</b>2014-9-11上午11:08:18<br>
 	 * @author: cuicong
 	 */
 	public List<Menu> queryBelongMenu(Integer userId);
 
 	/**
 	 * 
-	 * 鑾峰彇鎵�鏈夌殑鑿滃崟
+	 * 获取所有的菜单
 	 * 
-	 * @return <b>Date:</b>2014-9-11涓婂崍11:09:17<br>
+	 * @return <b>Date:</b>2014-9-11上午11:09:17<br>
 	 * @author: cuicong
 	 */
 	public List<Menu> queryAllMenu();
@@ -31,7 +31,7 @@ public interface MenuMapper {
 	 * get
 	 * 
 	 * @param menuId
-	 * @return <b>Date:</b>2014-9-11涓婂崍11:10:33<br>
+	 * @return <b>Date:</b>2014-9-11上午11:10:33<br>
 	 * @author: cuicong
 	 */
 

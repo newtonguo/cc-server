@@ -7,29 +7,29 @@ import com.cc.entity.User;
 public interface UserMapper {
 	/**
 	 * 
-	 * æ ¹æ®ç”¨æˆ·åå’Œå¯†ç æŸ¥è¯¢
+	 * ¸ù¾İÓÃ»§ÃûºÍÃÜÂë²éÑ¯
 	 * 
 	 * @param user
-	 * @return <b>Date:</b>2014-9-10ä¸‹åˆ4:36:44<br>
+	 * @return <b>Date:</b>2014-9-10ÏÂÎç4:36:44<br>
 	 * @author: cuicong
 	 */
 	public List<User> getUser(User user);
 
 	/**
 	 * 
-	 * æ ¹æ®ä¸»é”®idæŸ¥è¯¢
+	 * ¸ù¾İÖ÷¼üid²éÑ¯
 	 * 
 	 * @param userId
-	 * @return <b>Date:</b>2014-9-10ä¸‹åˆ4:37:15<br>
+	 * @return <b>Date:</b>2014-9-10ÏÂÎç4:37:15<br>
 	 * @author: cuicong
 	 */
 	public List<User> getUserById(int userId);
 
 	/**
 	 * 
-	 * æŸ¥è¯¢ï¿½?ï¿½ï¿½çš„ç”¨ï¿½?
+	 * ²éÑ¯????µÄÓÃ??
 	 * 
-	 * @return <b>Date:</b>2014-9-10ä¸‹åˆ4:40:06<br>
+	 * @return <b>Date:</b>2014-9-10ÏÂÎç4:40:06<br>
 	 * @author: cuicong
 	 */
 	public List<User> queryAllUser();

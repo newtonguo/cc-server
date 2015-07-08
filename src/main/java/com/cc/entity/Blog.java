@@ -1,53 +1,52 @@
 package com.cc.entity;
 
-
 /**
  * blog
  */
 public class Blog {
 
 	/**
-	 * åšå®¢idï¼ˆä¸»é”®ï¼‰
+	 * ²©¿Íid£¨Ö÷¼ü£©
 	 */
 	private Integer blogId;
 
 	/**
-	 * åšå®¢æ ‡é¢˜
+	 * ²©¿Í±êÌâ
 	 */
 	private String blogTitle;
 
 	/**
-	 * åšæ–‡æè¿°
+	 * ²©ÎÄÃèÊö
 	 */
 	private String blogDescription;
 
 	/**
-	 * åˆ›å»ºäºº
+	 * ´´½¨ÈË
 	 */
 	private Integer createUser;
 
 	/**
-	 * åˆ›å»ºæ—¶é—´
+	 * ´´½¨Ê±¼ä
 	 */
 	private java.util.Date createTime;
 
 	/**
-	 * è·Ÿæ–°äºº
+	 * ¸úĞÂÈË
 	 */
 	private Integer updateUser;
 
 	/**
-	 * è·Ÿæ–°æ—¶é—´
+	 * ¸úĞÂÊ±¼ä
 	 */
 	private java.util.Date updateTime;
 
 	/**
-	 * åšå®¢ä½œè€…
+	 * ²©¿Í×÷Õß
 	 */
 	private Integer blogger;
 
 	/**
-	 * åšå®¢ç±»å‹
+	 * ²©¿ÍÀàĞÍ
 	 */
 	private Integer blogType;
 
@@ -57,7 +56,7 @@ public class Blog {
 	private Integer start;
 
 	/**
-	 * æ–‡ç« å†…å®¹
+	 * ÎÄÕÂÄÚÈİ
 	 */
 	private byte[] blogContent;
 

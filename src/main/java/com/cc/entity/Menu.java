@@ -4,10 +4,10 @@ import java.sql.Timestamp;
 import java.util.List;
 
 /**
- * èœå•è¡¨ <b>Application describing:</b> <br>
+ * ²Ëµ¥±í <b>Application describing:</b> <br>
  * <b>Copyright:</b>Copyright &copy; 2014 <br>
  * <b>Company:vvme</b><br>
- * <b>Date:</b>2014-9-12ä¸‹åˆ5:50:11<br>
+ * <b>Date:</b>2014-9-12ÏÂÎç5:50:11<br>
  * 
  * @author cuicong
  */
@@ -17,7 +17,7 @@ public class Menu implements java.io.Serializable {
 	// Fields
 
 	/**
-	 * {å­—æ®µåŠŸèƒ½æè¿°}
+	 * {×Ö¶Î¹¦ÄÜÃèÊö}
 	 */
 	private static final long serialVersionUID = 1L;
 	private Integer menuId;
@@ -28,11 +28,11 @@ public class Menu implements java.io.Serializable {
 	private Integer updatePersonId;
 	private Integer level;
 	private Integer PId;
-	private List<Menu> children;// ä¸‹å±èœå•
-	private String belongRoleId = "";// æ‰€å±è§’è‰²id
-	private String isLocked;// æ˜¯å¦è¢«é”
-	private String enableFlag;// æ˜¯å¦å¯ç”¨
-	private String menuSort;// æ’åº
+	private List<Menu> children;// ÏÂÊô²Ëµ¥
+	private String belongRoleId = "";// ËùÊô½ÇÉ«id
+	private String isLocked;// ÊÇ·ñ±»Ëø
+	private String enableFlag;// ÊÇ·ñ¿ÉÓÃ
+	private String menuSort;// ÅÅĞò
 	private String pName;
 
 	// Constructors

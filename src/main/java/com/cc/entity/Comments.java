@@ -7,47 +7,47 @@ package com.cc.entity;
 public class Comments {
 
 	/**
-	 * è¯„è®ºid
+	 * ÆÀÂÛid
 	 */
 	private Integer commentsId;
 
 	/**
-	 * åšå®¢id
+	 * ²©¿Íid
 	 */
 	private Integer blogId;
 
 	/**
-	 * è¯„è®ºä¸»é¢˜
+	 * ÆÀÂÛÖ÷Ìâ
 	 */
 	private String commentsTitle;
 
 	/**
-	 * è¯„è®ºå†…å®¹
+	 * ÆÀÂÛÄÚÈİ
 	 */
 	private String commentContent;
 
 	/**
-	 * ä¸¾æŠ¥äººæ•°
+	 * ¾Ù±¨ÈËÊı
 	 */
 	private Integer reportNum;
 
 	/**
-	 * å–œæ¬¢äººæ•°
+	 * Ï²»¶ÈËÊı
 	 */
 	private Integer startNum;
 
 	/**
-	 * çˆ¶è¯„è®ºid
+	 * ¸¸ÆÀÂÛid
 	 */
 	private Integer parentId;
 
 	/**
-	 * è¯„è®ºè·¯å¾„
+	 * ÆÀÂÛÂ·¾¶
 	 */
 	private String commentsUrl;
 
 	/**
-	 * çŠ¶æ€
+	 * ×´Ì¬
 	 */
 	private String status;
 
@@ -57,7 +57,7 @@ public class Comments {
 	private String ip;
 
 	/**
-	 * è¯„è®ºäºº
+	 * ÆÀÂÛÈË
 	 */
 	private Integer commentUser;
 
@@ -67,7 +67,7 @@ public class Comments {
 	private java.util.Date createTime;
 
 	/**
-	 * åˆ›å»ºäºº
+	 * ´´½¨ÈË
 	 */
 	private Integer createUser;
 

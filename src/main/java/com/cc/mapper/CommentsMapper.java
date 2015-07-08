@@ -8,44 +8,44 @@ public interface CommentsMapper{
    
 	
 	/**
-	 * æ ¹æ®æ¡ä»¶ æŸ¥è¯¢å…¨éƒ¨listPageAccount
+	 * ¸ù¾İÌõ¼ş ²éÑ¯È«²¿listPageAccount
 	 */
 	 
 	public List<Comments> listPageComments(Comments comments);
 	
 	/**
-	 *  è·å–Commentsçš„æ•°é‡
+	 *  »ñÈ¡CommentsµÄÊıÁ¿
 	 */
 	public Integer getCommentsCount();
 	
 	/**
-	 *æ’å…¥
+	 *²åÈë
 	 */
 	public void insert(Comments comments);
 	
 	/**
-	 * æ ¹æ®ä¸»é”®æŸ¥è¯¢(å”¯ä¸€)
+	 * ¸ù¾İÖ÷¼ü²éÑ¯(Î¨Ò»)
 	 */
 	public Comments getCommentsById(Integer id);
 	
 	/**
-	 * æ ¹æ®æ ¹æ®æ¡ä»¶æŸ¥è¯¢Comments 
+	 * ¸ù¾İ¸ù¾İÌõ¼ş²éÑ¯Comments 
 	 */
 	public List<Comments> getComments(Comments comments);  
 	 
 	 /**
-	 * æ›´æ–°Comments
+	 * ¸üĞÂComments
 	 */
 	public void updateComments(Comments comments);
 	
 	 /**
-	 * å¾ˆæ®å®ä½“ç±»åˆ é™¤
+	 * ºÜ¾İÊµÌåÀàÉ¾³ı
 	 */
 	
 	public void  deleteComments(Comments comments);
 	
 	 /**
-	 * æ ¹æ®ä¸»é”®åˆ é™¤
+	 * ¸ù¾İÖ÷¼üÉ¾³ı
 	 */
 	public void  deleteCommentsByIds (String[] id);
 	

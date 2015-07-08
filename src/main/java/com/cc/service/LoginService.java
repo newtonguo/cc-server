@@ -8,16 +8,16 @@ import com.cc.entity.User;
 public interface LoginService {
 	/**
 	 * 
-	 * 鑾峰彇鐢ㄦ埛鏍规嵁鐢ㄦ埛鍚嶅拰瀵嗙爜
+	 * 获取用户根据用户名和密码
 	 * 
 	 * @param userName
 	 * @param password
-	 * @return <b>Date:</b>2014-8-20涓婂崍10:48:20<br>
+	 * @return <b>Date:</b>2014-8-20上午10:48:20<br>
 	 * @author: cuicong
 	 */
 	public User getUser(String userName, String password);
 
-	// 鏍规嵁id鑾峰彇鎵�浠ョ敤鎴锋墍灞炵殑鑿滃崟
-	public List<Menu> ListMenuByUserId(User user);// 鏍规嵁id鑾峰彇鎵�浠ョ敤鎴锋墍灞炵殑鑿滃崟
+	// 根据id获取所以用户所属的菜单
+	public List<Menu> ListMenuByUserId(User user);// 根据id获取所以用户所属的菜单
 
 }
