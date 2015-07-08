@@ -28,7 +28,7 @@ public class Location {
     /**
        创建时间
      */
-    private java.util.Date createtime;
+    private String createtime;
 
     /**
        
@@ -69,11 +69,11 @@ public class Location {
         this.lat = lat;
     }
 
-    public java.util.Date getCreatetime() {
+    public String getCreatetime() {
         return createtime;
     }
 
-    public void setCreatetime(java.util.Date createtime) {
+    public void setCreatetime(String createtime) {
         this.createtime = createtime;
     }
 
