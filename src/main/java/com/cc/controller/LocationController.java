@@ -64,7 +64,9 @@ public class LocationController {
     public Location save(Location location) {
         try {
             if (location.getId() == null || location.getId().intValue() == 0) {
-                locationService.insert(location);
+                if (location.getLat() != 0 && location.getLng() != 0) {
+                    locationService.insert(location);
+                }
             }
             else {
                 locationService.updateLocation(location);
