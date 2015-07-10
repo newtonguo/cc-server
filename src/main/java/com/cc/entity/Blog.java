@@ -5,147 +5,147 @@ package com.cc.entity;
  */
 public class Blog {
 
-	/**
-	 * ²©¿Íid£¨Ö÷¼ü£©
-	 */
-	private Integer blogId;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer blogId;
 
-	/**
-	 * ²©¿Í±êÌâ
-	 */
-	private String blogTitle;
+    /**
+     * ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½
+     */
+    private String blogTitle;
 
-	/**
-	 * ²©ÎÄÃèÊö
-	 */
-	private String blogDescription;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private String blogDescription;
 
-	/**
-	 * ´´½¨ÈË
-	 */
-	private Integer createUser;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer createUser;
 
-	/**
-	 * ´´½¨Ê±¼ä
-	 */
-	private java.util.Date createTime;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+     */
+    private java.util.Date createTime;
 
-	/**
-	 * ¸úÐÂÈË
-	 */
-	private Integer updateUser;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer updateUser;
 
-	/**
-	 * ¸úÐÂÊ±¼ä
-	 */
-	private java.util.Date updateTime;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+     */
+    private java.util.Date updateTime;
 
-	/**
-	 * ²©¿Í×÷Õß
-	 */
-	private Integer blogger;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer blogger;
 
-	/**
-	 * ²©¿ÍÀàÐÍ
-	 */
-	private Integer blogType;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer blogType;
 
-	/**
-	   
-	 */
-	private Integer start;
+    /**
+       
+     */
+    private Integer start;
 
-	/**
-	 * ÎÄÕÂÄÚÈÝ
-	 */
-	private byte[] blogContent;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private String blogContent;
 
-	public Integer getBlogId() {
-		return blogId;
-	}
+    public Integer getBlogId() {
+        return blogId;
+    }
 
-	public void setBlogId(Integer blogId) {
-		this.blogId = blogId;
-	}
+    public void setBlogId(Integer blogId) {
+        this.blogId = blogId;
+    }
 
-	public String getBlogTitle() {
-		return blogTitle;
-	}
+    public String getBlogTitle() {
+        return blogTitle;
+    }
 
-	public void setBlogTitle(String blogTitle) {
-		this.blogTitle = blogTitle;
-	}
+    public void setBlogTitle(String blogTitle) {
+        this.blogTitle = blogTitle;
+    }
 
-	public String getBlogDescription() {
-		return blogDescription;
-	}
+    public String getBlogDescription() {
+        return blogDescription;
+    }
 
-	public void setBlogDescription(String blogDescription) {
-		this.blogDescription = blogDescription;
-	}
+    public void setBlogDescription(String blogDescription) {
+        this.blogDescription = blogDescription;
+    }
 
-	public Integer getCreateUser() {
-		return createUser;
-	}
+    public Integer getCreateUser() {
+        return createUser;
+    }
 
-	public void setCreateUser(Integer createUser) {
-		this.createUser = createUser;
-	}
+    public void setCreateUser(Integer createUser) {
+        this.createUser = createUser;
+    }
 
-	public java.util.Date getCreateTime() {
-		return createTime;
-	}
+    public java.util.Date getCreateTime() {
+        return createTime;
+    }
 
-	public void setCreateTime(java.util.Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
 
-	public Integer getUpdateUser() {
-		return updateUser;
-	}
+    public Integer getUpdateUser() {
+        return updateUser;
+    }
 
-	public void setUpdateUser(Integer updateUser) {
-		this.updateUser = updateUser;
-	}
+    public void setUpdateUser(Integer updateUser) {
+        this.updateUser = updateUser;
+    }
 
-	public java.util.Date getUpdateTime() {
-		return updateTime;
-	}
+    public java.util.Date getUpdateTime() {
+        return updateTime;
+    }
 
-	public void setUpdateTime(java.util.Date updateTime) {
-		this.updateTime = updateTime;
-	}
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
+    }
 
-	public Integer getBlogger() {
-		return blogger;
-	}
+    public Integer getBlogger() {
+        return blogger;
+    }
 
-	public void setBlogger(Integer blogger) {
-		this.blogger = blogger;
-	}
+    public void setBlogger(Integer blogger) {
+        this.blogger = blogger;
+    }
 
-	public Integer getBlogType() {
-		return blogType;
-	}
+    public Integer getBlogType() {
+        return blogType;
+    }
 
-	public void setBlogType(Integer blogType) {
-		this.blogType = blogType;
-	}
+    public void setBlogType(Integer blogType) {
+        this.blogType = blogType;
+    }
 
-	public Integer getStart() {
-		return start;
-	}
+    public Integer getStart() {
+        return start;
+    }
 
-	public void setStart(Integer start) {
-		this.start = start;
-	}
+    public void setStart(Integer start) {
+        this.start = start;
+    }
 
-	public byte[] getBlogContent() {
-		return blogContent;
-	}
+    public String getBlogContent() {
+        return blogContent;
+    }
 
-	public void setBlogContent(byte[] blogContent) {
-		this.blogContent = blogContent;
-	}
+    public void setBlogContent(String blogContent) {
+        this.blogContent = blogContent;
+    }
 
 }
