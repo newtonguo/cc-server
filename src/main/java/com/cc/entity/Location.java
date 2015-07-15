@@ -36,6 +36,15 @@ public class Location {
     private String address;
 
     //分页
+    private Page page;
+
+    public Page getPage() {
+        return page;
+    }
+
+    public void setPage(Page page) {
+        this.page = page;
+    }
 
     public Integer getId() {
         return id;

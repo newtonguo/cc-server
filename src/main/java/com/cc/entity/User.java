@@ -11,144 +11,165 @@ package com.cc.entity;
 
 public class User implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	/**
-	 * {�ֶι�������}
-	 */
-	private static final long serialVersionUID = 1L;
-	private Integer userId;
-	private String userName;
-	private String password;
-	private String name;
-	private String isLocked;
-	private String enableFlag;
-	private String sex;
-	private String email;
-	private String address;
-	private String tel;
-	private String belongRoles = "";// �û�ӵ�еĽ�ɫ
-	private String info;
+    /**
+     * {�ֶι�������}
+     */
+    private static final long serialVersionUID = 1L;
 
-	// Constructors
+    private Integer userId;
 
-	public String getInfo() {
-		return info;
-	}
+    private String userName;
 
-	public void setInfo(String info) {
-		this.info = info;
-	}
+    private String password;
 
-	public String getBelongRoles() {
-		return belongRoles;
-	}
+    private String name;
 
-	public void setBelongRoles(String belongRoles) {
-		this.belongRoles = belongRoles;
-	}
+    private String isLocked;
 
-	public String getSex() {
-		return sex;
-	}
+    private String enableFlag;
 
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
+    private String sex;
 
-	public String getEmail() {
-		return email;
-	}
+    private String email;
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    private String address;
 
-	public String getAddress() {
-		return address;
-	}
+    private String tel;
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    private String belongRoles = "";// �û�ӵ�еĽ�ɫ
 
-	public String getTel() {
-		return tel;
-	}
+    private String info;
 
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
+    // Constructors
+    private Page page;
 
-	public String getIsLocked() {
-		return isLocked;
-	}
+    public Page getPage() {
+        return page;
+    }
 
-	public void setIsLocked(String isLocked) {
-		this.isLocked = isLocked;
-	}
+    public void setPage(Page page) {
+        this.page = page;
+    }
 
-	public String getEnableFlag() {
-		return enableFlag;
-	}
+    public String getInfo() {
+        return info;
+    }
 
-	public void setEnableFlag(String enableFlag) {
-		this.enableFlag = enableFlag;
-	}
+    public void setInfo(String info) {
+        this.info = info;
+    }
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+    public String getBelongRoles() {
+        return belongRoles;
+    }
 
-	/** default constructor */
-	public User() {
-	}
+    public void setBelongRoles(String belongRoles) {
+        this.belongRoles = belongRoles;
+    }
 
-	/** minimal constructor */
-	public User(String userName, String password) {
-		this.userName = userName;
-		this.password = password;
-	}
+    public String getSex() {
+        return sex;
+    }
 
-	/** full constructor */
-	public User(String userName, String password, String name) {
-		this.userName = userName;
-		this.password = password;
-		this.name = name;
-	}
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
-	// Property accessors
+    public String getEmail() {
+        return email;
+    }
 
-	public Integer getUserId() {
-		return this.userId;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getUserName() {
-		return this.userName;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public String getTel() {
+        return tel;
+    }
 
-	public String getPassword() {
-		return this.password;
-	}
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getIsLocked() {
+        return isLocked;
+    }
 
-	public String getName() {
-		return this.name;
-	}
+    public void setIsLocked(String isLocked) {
+        this.isLocked = isLocked;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getEnableFlag() {
+        return enableFlag;
+    }
+
+    public void setEnableFlag(String enableFlag) {
+        this.enableFlag = enableFlag;
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+
+    /** default constructor */
+    public User() {
+    }
+
+    /** minimal constructor */
+    public User(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
+    /** full constructor */
+    public User(String userName, String password, String name) {
+        this.userName = userName;
+        this.password = password;
+        this.name = name;
+    }
+
+    // Property accessors
+
+    public Integer getUserId() {
+        return this.userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

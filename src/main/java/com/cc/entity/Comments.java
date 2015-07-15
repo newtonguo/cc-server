@@ -1,204 +1,213 @@
 package com.cc.entity;
 
-
 /**
  * comments
  */
 public class Comments {
 
-	/**
-	 * ÆÀÂÛid
-	 */
-	private Integer commentsId;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½id
+     */
+    private Integer commentsId;
 
-	/**
-	 * ²©¿Íid
-	 */
-	private Integer blogId;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½id
+     */
+    private Integer blogId;
 
-	/**
-	 * ÆÀÂÛÖ÷Ìâ
-	 */
-	private String commentsTitle;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private String commentsTitle;
 
-	/**
-	 * ÆÀÂÛÄÚÈÝ
-	 */
-	private String commentContent;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private String commentContent;
 
-	/**
-	 * ¾Ù±¨ÈËÊý
-	 */
-	private Integer reportNum;
+    /**
+     * ï¿½Ù±ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer reportNum;
 
-	/**
-	 * Ï²»¶ÈËÊý
-	 */
-	private Integer startNum;
+    /**
+     * Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer startNum;
 
-	/**
-	 * ¸¸ÆÀÂÛid
-	 */
-	private Integer parentId;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½id
+     */
+    private Integer parentId;
 
-	/**
-	 * ÆÀÂÛÂ·¾¶
-	 */
-	private String commentsUrl;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+     */
+    private String commentsUrl;
 
-	/**
-	 * ×´Ì¬
-	 */
-	private String status;
+    /**
+     * ×´Ì¬
+     */
+    private String status;
 
-	/**
-	   
-	 */
-	private String ip;
+    /**
+       
+     */
+    private String ip;
 
-	/**
-	 * ÆÀÂÛÈË
-	 */
-	private Integer commentUser;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer commentUser;
 
-	/**
-	   
-	 */
-	private java.util.Date createTime;
+    /**
+       
+     */
+    private java.util.Date createTime;
 
-	/**
-	 * ´´½¨ÈË
-	 */
-	private Integer createUser;
+    /**
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     */
+    private Integer createUser;
 
-	/**
-	   
-	 */
-	private java.util.Date updateTime;
+    /**
+       
+     */
+    private java.util.Date updateTime;
 
-	/**
-	   
-	 */
-	private Integer updateUser;
+    /**
+       
+     */
+    private Integer updateUser;
 
-	public Integer getCommentsId() {
-		return commentsId;
-	}
+    private Page page;
 
-	public void setCommentsId(Integer commentsId) {
-		this.commentsId = commentsId;
-	}
+    public Page getPage() {
+        return page;
+    }
 
-	public Integer getBlogId() {
-		return blogId;
-	}
+    public void setPage(Page page) {
+        this.page = page;
+    }
 
-	public void setBlogId(Integer blogId) {
-		this.blogId = blogId;
-	}
+    public Integer getCommentsId() {
+        return commentsId;
+    }
 
-	public String getCommentsTitle() {
-		return commentsTitle;
-	}
+    public void setCommentsId(Integer commentsId) {
+        this.commentsId = commentsId;
+    }
 
-	public void setCommentsTitle(String commentsTitle) {
-		this.commentsTitle = commentsTitle;
-	}
+    public Integer getBlogId() {
+        return blogId;
+    }
 
-	public String getCommentContent() {
-		return commentContent;
-	}
+    public void setBlogId(Integer blogId) {
+        this.blogId = blogId;
+    }
 
-	public void setCommentContent(String commentContent) {
-		this.commentContent = commentContent;
-	}
+    public String getCommentsTitle() {
+        return commentsTitle;
+    }
 
-	public Integer getReportNum() {
-		return reportNum;
-	}
+    public void setCommentsTitle(String commentsTitle) {
+        this.commentsTitle = commentsTitle;
+    }
 
-	public void setReportNum(Integer reportNum) {
-		this.reportNum = reportNum;
-	}
+    public String getCommentContent() {
+        return commentContent;
+    }
 
-	public Integer getStartNum() {
-		return startNum;
-	}
+    public void setCommentContent(String commentContent) {
+        this.commentContent = commentContent;
+    }
 
-	public void setStartNum(Integer startNum) {
-		this.startNum = startNum;
-	}
+    public Integer getReportNum() {
+        return reportNum;
+    }
 
-	public Integer getParentId() {
-		return parentId;
-	}
+    public void setReportNum(Integer reportNum) {
+        this.reportNum = reportNum;
+    }
 
-	public void setParentId(Integer parentId) {
-		this.parentId = parentId;
-	}
+    public Integer getStartNum() {
+        return startNum;
+    }
 
-	public String getCommentsUrl() {
-		return commentsUrl;
-	}
+    public void setStartNum(Integer startNum) {
+        this.startNum = startNum;
+    }
 
-	public void setCommentsUrl(String commentsUrl) {
-		this.commentsUrl = commentsUrl;
-	}
+    public Integer getParentId() {
+        return parentId;
+    }
 
-	public String getStatus() {
-		return status;
-	}
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
+    }
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    public String getCommentsUrl() {
+        return commentsUrl;
+    }
 
-	public String getIp() {
-		return ip;
-	}
+    public void setCommentsUrl(String commentsUrl) {
+        this.commentsUrl = commentsUrl;
+    }
 
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
+    public String getStatus() {
+        return status;
+    }
 
-	public Integer getCommentUser() {
-		return commentUser;
-	}
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-	public void setCommentUser(Integer commentUser) {
-		this.commentUser = commentUser;
-	}
+    public String getIp() {
+        return ip;
+    }
 
-	public java.util.Date getCreateTime() {
-		return createTime;
-	}
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
 
-	public void setCreateTime(java.util.Date createTime) {
-		this.createTime = createTime;
-	}
+    public Integer getCommentUser() {
+        return commentUser;
+    }
 
-	public Integer getCreateUser() {
-		return createUser;
-	}
+    public void setCommentUser(Integer commentUser) {
+        this.commentUser = commentUser;
+    }
 
-	public void setCreateUser(Integer createUser) {
-		this.createUser = createUser;
-	}
+    public java.util.Date getCreateTime() {
+        return createTime;
+    }
 
-	public java.util.Date getUpdateTime() {
-		return updateTime;
-	}
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
 
-	public void setUpdateTime(java.util.Date updateTime) {
-		this.updateTime = updateTime;
-	}
+    public Integer getCreateUser() {
+        return createUser;
+    }
 
-	public Integer getUpdateUser() {
-		return updateUser;
-	}
+    public void setCreateUser(Integer createUser) {
+        this.createUser = createUser;
+    }
 
-	public void setUpdateUser(Integer updateUser) {
-		this.updateUser = updateUser;
-	}
+    public java.util.Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Integer getUpdateUser() {
+        return updateUser;
+    }
+
+    public void setUpdateUser(Integer updateUser) {
+        this.updateUser = updateUser;
+    }
 
 }

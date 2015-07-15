@@ -28,65 +28,66 @@ import com.cc.configuration.TomcatPoolDataSourceProperties;
 @MapperScan("com.cc.mapper")
 public class Application {
 
-	@Autowired
-	private TomcatPoolDataSourceProperties tomcatPoolDataSourceProperties;
+    @Autowired
+    private TomcatPoolDataSourceProperties tomcatPoolDataSourceProperties;
 
-	private org.apache.tomcat.jdbc.pool.DataSource pool;
+    private org.apache.tomcat.jdbc.pool.DataSource pool;
 
-	@Bean(destroyMethod = "close")
-	public DataSource dataSource() {
+    @Bean(destroyMethod = "close")
+    public DataSource dataSource() {
 
-		TomcatPoolDataSourceProperties config = tomcatPoolDataSourceProperties;
+        TomcatPoolDataSourceProperties config = tomcatPoolDataSourceProperties;
 
-		this.pool = new org.apache.tomcat.jdbc.pool.DataSource();
+        this.pool = new org.apache.tomcat.jdbc.pool.DataSource();
 
-		this.pool.setDriverClassName(config.getDriverClassName());
-		this.pool.setUrl(config.getUrl());
-		if (config.getUsername() != null) {
-			this.pool.setUsername(config.getUsername());
-		}
-		if (config.getPassword() != null) {
-			this.pool.setPassword(config.getPassword());
-		}
-		this.pool.setInitialSize(config.getInitialSize());
-		this.pool.setMaxActive(config.getMaxActive());
-		this.pool.setMaxIdle(config.getMaxIdle());
-		this.pool.setMinIdle(config.getMinIdle());
-		this.pool.setTestOnBorrow(config.isTestOnBorrow());
-		this.pool.setTestOnReturn(config.isTestOnReturn());
-		this.pool.setValidationQuery(config.getValidationQuery());
-		return this.pool;
-	}
+        this.pool.setDriverClassName(config.getDriverClassName());
+        this.pool.setUrl(config.getUrl());
+        if (config.getUsername() != null) {
+            this.pool.setUsername(config.getUsername());
+        }
+        if (config.getPassword() != null) {
+            this.pool.setPassword(config.getPassword());
+        }
+        this.pool.setInitialSize(config.getInitialSize());
+        this.pool.setMaxActive(config.getMaxActive());
+        this.pool.setMaxIdle(config.getMaxIdle());
+        this.pool.setMinIdle(config.getMinIdle());
+        this.pool.setTestOnBorrow(config.isTestOnBorrow());
+        this.pool.setTestOnReturn(config.isTestOnReturn());
+        this.pool.setValidationQuery(config.getValidationQuery());
+        return this.pool;
+    }
 
-	@PreDestroy
-	public void close() {
-		if (this.pool != null) {
-			this.pool.close();
-		}
-	}
+    @PreDestroy
+    public void close() {
+        if (this.pool != null) {
+            this.pool.close();
+        }
+    }
 
-	@Bean
-	public SqlSessionFactory sqlSessionFactoryBean() throws Exception {
+    @Bean
+    public SqlSessionFactory sqlSessionFactoryBean() throws Exception {
 
-		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-		sqlSessionFactoryBean.setDataSource(dataSource());
+        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        sqlSessionFactoryBean.setDataSource(dataSource());
 
-		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		sqlSessionFactoryBean.setMapperLocations(resolver
-				.getResources("classpath:mapper/*.xml"));
-		return sqlSessionFactoryBean.getObject();
-	}
+        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));
+        sqlSessionFactoryBean.setConfigLocation(resolver.getResource("mybatis-config.xml"));
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.cc.entity");
 
-	@Bean
-	public PlatformTransactionManager transactionManager() {
-		return new DataSourceTransactionManager(dataSource());
-	}
+        return sqlSessionFactoryBean.getObject();
+    }
 
-	@SuppressWarnings("unused")
-	public static void main(String[] args) {
-		ConfigurableApplicationContext ctx = SpringApplication.run(
-				new Object[] { Application.class }, args);
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        return new DataSourceTransactionManager(dataSource());
+    }
 
-	}
+    @SuppressWarnings("unused")
+    public static void main(String[] args) {
+        ConfigurableApplicationContext ctx = SpringApplication.run(new Object[] { Application.class }, args);
+
+    }
 
 }

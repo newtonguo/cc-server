@@ -4,172 +4,194 @@ import java.sql.Timestamp;
 import java.util.List;
 
 /**
- * ²Ëµ¥±í <b>Application describing:</b> <br>
+ * ï¿½Ëµï¿½ï¿½ï¿½ <b>Application describing:</b> <br>
  * <b>Copyright:</b>Copyright &copy; 2014 <br>
  * <b>Company:vvme</b><br>
- * <b>Date:</b>2014-9-12ÏÂÎç5:50:11<br>
+ * <b>Date:</b>2014-9-12ï¿½ï¿½ï¿½ï¿½5:50:11<br>
  * 
  * @author cuicong
  */
 
 public class Menu implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	/**
-	 * {×Ö¶Î¹¦ÄÜÃèÊö}
-	 */
-	private static final long serialVersionUID = 1L;
-	private Integer menuId;
-	private String menuName;
-	private String menuUrl;
-	private Timestamp updateTime;
-	private String updatePerson;
-	private Integer updatePersonId;
-	private Integer level;
-	private Integer PId;
-	private List<Menu> children;// ÏÂÊô²Ëµ¥
-	private String belongRoleId = "";// ËùÊô½ÇÉ«id
-	private String isLocked;// ÊÇ·ñ±»Ëø
-	private String enableFlag;// ÊÇ·ñ¿ÉÓÃ
-	private String menuSort;// ÅÅÐò
-	private String pName;
+    /**
+     * {ï¿½Ö¶Î¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½}
+     */
+    private static final long serialVersionUID = 1L;
 
-	// Constructors
+    private Integer menuId;
 
-	public String getpName() {
-		return pName;
-	}
+    private String menuName;
 
-	public void setpName(String pName) {
-		this.pName = pName;
-	}
+    private String menuUrl;
 
-	public String getBelongRoleId() {
-		return belongRoleId;
-	}
+    private Timestamp updateTime;
 
-	public String getIsLocked() {
-		return isLocked;
-	}
+    private String updatePerson;
 
-	public void setIsLocked(String isLocked) {
-		this.isLocked = isLocked;
-	}
+    private Integer updatePersonId;
 
-	public String getEnableFlag() {
-		return enableFlag;
-	}
+    private Integer level;
 
-	public void setEnableFlag(String enableFlag) {
-		this.enableFlag = enableFlag;
-	}
+    private Integer PId;
 
-	public String getMenuSort() {
-		return menuSort;
-	}
+    private List<Menu> children;// ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½
 
-	public void setMenuSort(String menuSort) {
-		this.menuSort = menuSort;
-	}
+    private String belongRoleId = "";// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«id
 
-	public void setBelongRoleId(String belongRoleId) {
-		this.belongRoleId = belongRoleId;
-	}
+    private String isLocked;// ï¿½Ç·ï¿½ï¿½ï¿½
 
-	public List<Menu> getChildren() {
-		return children;
-	}
+    private String enableFlag;// ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 
-	public void setChildren(List<Menu> children) {
-		this.children = children;
-	}
+    private String menuSort;// ï¿½ï¿½ï¿½ï¿½
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+    private String pName;
 
-	/** default constructor */
-	public Menu() {
-	}
+    // Constructors
+    private Page page;
 
-	/** full constructor */
-	public Menu(String menuName, String menuUrl, Timestamp updateTime,
-			String updatePerson, Integer updatePersonId, Integer level,
-			Integer PId) {
-		this.menuName = menuName;
-		this.menuUrl = menuUrl;
-		this.updateTime = updateTime;
-		this.updatePerson = updatePerson;
-		this.updatePersonId = updatePersonId;
-		this.level = level;
-		this.PId = PId;
-	}
+    public Page getPage() {
+        return page;
+    }
 
-	// Property accessors
+    public void setPage(Page page) {
+        this.page = page;
+    }
 
-	public Integer getMenuId() {
-		return this.menuId;
-	}
+    public String getpName() {
+        return pName;
+    }
 
-	public void setMenuId(Integer menuId) {
-		this.menuId = menuId;
-	}
+    public void setpName(String pName) {
+        this.pName = pName;
+    }
 
-	public String getMenuName() {
-		return this.menuName;
-	}
+    public String getBelongRoleId() {
+        return belongRoleId;
+    }
 
-	public void setMenuName(String menuName) {
-		this.menuName = menuName;
-	}
+    public String getIsLocked() {
+        return isLocked;
+    }
 
-	public String getMenuUrl() {
-		return this.menuUrl;
-	}
+    public void setIsLocked(String isLocked) {
+        this.isLocked = isLocked;
+    }
 
-	public void setMenuUrl(String menuUrl) {
-		this.menuUrl = menuUrl;
-	}
+    public String getEnableFlag() {
+        return enableFlag;
+    }
 
-	public Timestamp getUpdateTime() {
-		return this.updateTime;
-	}
+    public void setEnableFlag(String enableFlag) {
+        this.enableFlag = enableFlag;
+    }
 
-	public void setUpdateTime(Timestamp updateTime) {
-		this.updateTime = updateTime;
-	}
+    public String getMenuSort() {
+        return menuSort;
+    }
 
-	public String getUpdatePerson() {
-		return this.updatePerson;
-	}
+    public void setMenuSort(String menuSort) {
+        this.menuSort = menuSort;
+    }
 
-	public void setUpdatePerson(String updatePerson) {
-		this.updatePerson = updatePerson;
-	}
+    public void setBelongRoleId(String belongRoleId) {
+        this.belongRoleId = belongRoleId;
+    }
 
-	public Integer getUpdatePersonId() {
-		return this.updatePersonId;
-	}
+    public List<Menu> getChildren() {
+        return children;
+    }
 
-	public void setUpdatePersonId(Integer updatePersonId) {
-		this.updatePersonId = updatePersonId;
-	}
+    public void setChildren(List<Menu> children) {
+        this.children = children;
+    }
 
-	public Integer getLevel() {
-		return this.level;
-	}
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
-	public void setLevel(Integer level) {
-		this.level = level;
-	}
+    /** default constructor */
+    public Menu() {
+    }
 
-	public Integer getPId() {
-		return this.PId;
-	}
+    /** full constructor */
+    public Menu(String menuName, String menuUrl, Timestamp updateTime, String updatePerson, Integer updatePersonId,
+            Integer level, Integer PId) {
+        this.menuName = menuName;
+        this.menuUrl = menuUrl;
+        this.updateTime = updateTime;
+        this.updatePerson = updatePerson;
+        this.updatePersonId = updatePersonId;
+        this.level = level;
+        this.PId = PId;
+    }
 
-	public void setPId(Integer PId) {
-		this.PId = PId;
-	}
+    // Property accessors
+
+    public Integer getMenuId() {
+        return this.menuId;
+    }
+
+    public void setMenuId(Integer menuId) {
+        this.menuId = menuId;
+    }
+
+    public String getMenuName() {
+        return this.menuName;
+    }
+
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
+    }
+
+    public String getMenuUrl() {
+        return this.menuUrl;
+    }
+
+    public void setMenuUrl(String menuUrl) {
+        this.menuUrl = menuUrl;
+    }
+
+    public Timestamp getUpdateTime() {
+        return this.updateTime;
+    }
+
+    public void setUpdateTime(Timestamp updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getUpdatePerson() {
+        return this.updatePerson;
+    }
+
+    public void setUpdatePerson(String updatePerson) {
+        this.updatePerson = updatePerson;
+    }
+
+    public Integer getUpdatePersonId() {
+        return this.updatePersonId;
+    }
+
+    public void setUpdatePersonId(Integer updatePersonId) {
+        this.updatePersonId = updatePersonId;
+    }
+
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
+
+    public Integer getPId() {
+        return this.PId;
+    }
+
+    public void setPId(Integer PId) {
+        this.PId = PId;
+    }
 
 }

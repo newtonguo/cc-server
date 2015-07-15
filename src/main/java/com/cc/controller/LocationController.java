@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cc.entity.Location;
 import com.cc.service.LocationService;
+import com.google.gson.Gson;
 
 @RestController
 @RequestMapping(value = "/location")
@@ -37,8 +38,11 @@ public class LocationController {
      */
     @RequestMapping("list")
     public List<Location> list(Location location) {
-
         List<Location> locationList = locationService.listPageLocation(location);
+
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(location));
+
         return locationList;
     }
 

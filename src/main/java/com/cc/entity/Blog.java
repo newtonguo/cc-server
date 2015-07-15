@@ -60,6 +60,16 @@ public class Blog {
      */
     private String blogContent;
 
+    private Page page;
+
+    public Page getPage() {
+        return page;
+    }
+
+    public void setPage(Page page) {
+        this.page = page;
+    }
+
     public Integer getBlogId() {
         return blogId;
     }
