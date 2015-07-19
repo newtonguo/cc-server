@@ -27,7 +27,7 @@ dependencies {
 	
 	compile  'org.springframework.boot:spring-boot-starter-web:1.2.5.RELEASE'
 	compile  'org.springframework.boot:spring-boot-starter-actuator:1.2.5.RELEASE'
-	compile   'org.springframework.boot:spring-boot-starter-security:1.2.5.RELEASE'
+	//compile   'org.springframework.boot:spring-boot-starter-security:1.2.5.RELEASE'
 	compile("org.springframework:spring-jdbc:4.0.0.RELEASE")
 	compile("javax.inject:javax.inject:1")
 	compile("org.hsqldb:hsqldb:2.2.9")
